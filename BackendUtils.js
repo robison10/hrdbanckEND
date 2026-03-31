@@ -58,7 +58,7 @@ const BackendUtils = {
 
 class Database {
   constructor() {
-    this.mongoUri = process.env.mongoUri;
+    this.mongoUri = process.env.MONGO_URI || process.env.mongouri || process.env.MONGODB_URL;
     this.dbName = 'StumblePrism';
     this.client = null;
     this.db = null;
